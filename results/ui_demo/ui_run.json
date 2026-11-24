@@ -1,0 +1,40 @@
+{
+  "items_target": 20,
+  "interval_s": 0.5,
+  "screenshots": [
+    "01_line_idle.png",
+    "02_line_ng_moment.png",
+    "03_line_items.png",
+    "04_camera_mode.png",
+    "05_camera_capture.png",
+    "07_after_reload.png"
+  ],
+  "line_stats": {
+    "total": "20",
+    "ok": "7",
+    "ng": "13",
+    "defect_rate": "65.0%",
+    "avg_latency": "292 ms",
+    "table_rows": 20,
+    "trend_points": 638
+  },
+  "elapsed_s": 16.8,
+  "ng_shot": true,
+  "camera_mode": "ok",
+  "camera_stats": {
+    "total": "21",
+    "ng": "14",
+    "last_score": "83.322"
+  },
+  "after_reload": {
+    "total_before": "22",
+    "total_after": "22",
+    "ng_after": "15",
+    "history_rows_after": 22,
+    "counter_mode": "服务端累计，刷新后接着累计"
+  },
+  "console_errors": [],
+  "live_log_rows": 22,
+  "live_log_path": "outputs\\live\\live_log.csv",
+  "live_log_header": "time,category,mode,source,file,score,decision,latency_ms"
+}

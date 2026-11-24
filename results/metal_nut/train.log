@@ -1,0 +1,15 @@
+2026-11-24 14:48:36 | INFO    | ==========================================================================
+2026-11-24 14:48:36 | INFO    | PatchCore 建库开始 | 类别=metal_nut | 配置文件=D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\config.yaml
+2026-11-24 14:48:36 | INFO    | ==========================================================================
+2026-11-24 14:48:36 | INFO    | 数据: train/good=220 | test 正常=22 | test 异常=93 | 缺陷类型=['bent', 'color', 'flip', 'scratch']
+2026-11-24 14:48:36 | INFO    | torch=2.14.1+cpu | cuda_available=False | cuda_version=None
+2026-11-24 14:48:36 | WARNING | 设备策略 auto -> 未检测到可用 CUDA，自动回退到 CPU（推理/建库会明显变慢）。
+2026-11-24 14:48:36 | INFO    | 随机种子=42 | 设备=CPU: 16 threads | 输入尺寸=[256, 256]
+2026-11-24 14:48:36 | INFO    | Anomalib=2.7.1 | backbone=wide_resnet50_2 | layers=['layer2', 'layer3'] | coreset_ratio=0.100
+2026-11-24 14:48:54 | INFO    | 官方划分: 拟合用正常样本=176 | 验证用正常样本=44 | 测试集=115（test 未参与建库）
+2026-11-24 14:55:16 | INFO    | 建库完成: 耗时=374.8s | 记忆库形状=(18022, 1536) | 记忆库大小=105.6 MB
+2026-11-24 14:55:30 | INFO    | 验证集打分完成: 44 张 | 耗时=13.7s
+2026-11-24 14:55:30 | INFO    | 阈值: 40.871154 | 策略=val_normal_quantile | 分位=0.990 | 验证集正常样本误报率=0.0227
+2026-11-24 14:55:30 | INFO    | 模型已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\model.pt (200.7 MB)
+2026-11-24 14:55:30 | INFO    | 产物目录: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut
+2026-11-24 14:55:30 | INFO    | 下一步: python evaluate.py --category metal_nut

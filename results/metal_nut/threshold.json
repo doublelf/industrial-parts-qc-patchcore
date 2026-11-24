@@ -1,0 +1,15 @@
+{
+  "threshold": 40.65822458000183,
+  "strategy": "val_normal_robust",
+  "quantile": null,
+  "k": 3.0,
+  "val_fp_rate": 0.022727272727272728,
+  "n_val": 44,
+  "val_median": 35.13854217529297,
+  "val_mad": 1.2409915924072266,
+  "val_robust_sigma": 1.839894134902954,
+  "val_mean": 35.55653424696489,
+  "val_std": 2.2816762950122476,
+  "val_max": 41.870269775390625,
+  "val_min": 29.50845718383789
+}

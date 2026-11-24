@@ -1,0 +1,1286 @@
+{
+  "category": "screw",
+  "evaluated_at": "2026-11-24T15:52:46",
+  "seed": 42,
+  "device": "CPU: 16 threads",
+  "image_size": [
+    256,
+    256
+  ],
+  "anomalib_version": "2.7.1",
+  "n_test": 160,
+  "n_normal": 41,
+  "n_abnormal": 119,
+  "image_auroc": 0.9520393523262964,
+  "image_ap": 0.9827386602207078,
+  "pixel_auroc": 0.9895194136634675,
+  "pixel_ap": 0.3369196101247042,
+  "aupro": 0.9410942196846008,
+  "aupro_supported": true,
+  "aupro_fpr_limit": 0.3,
+  "threshold": {
+    "threshold": 34.15578017425537,
+    "tp": 94,
+    "tn": 37,
+    "fp": 4,
+    "fn": 25,
+    "accuracy": 0.81875,
+    "precision": 0.9591836734693877,
+    "recall": 0.7899159663865546,
+    "f1": 0.8663594470046083,
+    "n_normal": 41,
+    "n_abnormal": 119
+  },
+  "threshold_source": {
+    "threshold": 34.15578017425537,
+    "strategy": "val_normal_robust",
+    "quantile": null,
+    "k": 3.0,
+    "val_fp_rate": 0.03125,
+    "n_val": 64,
+    "val_median": 29.045146942138672,
+    "val_mad": 1.1490249633789062,
+    "val_robust_sigma": 1.7035444107055664,
+    "val_mean": 29.45622056722641,
+    "val_std": 2.7076508344573207,
+    "val_max": 43.92806625366211,
+    "val_min": 24.86033058166504
+  },
+  "latency": {
+    "mean_ms": 899.3652633336145,
+    "p50_ms": 891.8581000016275,
+    "p95_ms": 967.1721799999432,
+    "p99_ms": 999.769506002085,
+    "min_ms": 850.8736999974644,
+    "max_ms": 1028.3353000013449,
+    "n_samples": 60,
+    "includes_image_read": true,
+    "resolution": [
+      256,
+      256
+    ],
+    "device": "CPU: 16 threads",
+    "n_images": 20,
+    "repeats": 3
+  },
+  "per_type": {
+    "good": {
+      "count": 41,
+      "mean_score": 29.742972257660657,
+      "max_score": 35.330970764160156,
+      "min_score": 26.92350959777832,
+      "detected_at_threshold": 4,
+      "detect_rate": 0.0975609756097561,
+      "label": 0
+    },
+    "manipulated_front": {
+      "count": 24,
+      "mean_score": 35.62507073084513,
+      "max_score": 41.2329216003418,
+      "min_score": 30.308961868286133,
+      "detected_at_threshold": 17,
+      "detect_rate": 0.7083333333333334,
+      "label": 1
+    },
+    "scratch_head": {
+      "count": 24,
+      "mean_score": 36.82170820236206,
+      "max_score": 44.35238265991211,
+      "min_score": 29.7286376953125,
+      "detected_at_threshold": 20,
+      "detect_rate": 0.8333333333333334,
+      "label": 1
+    },
+    "scratch_neck": {
+      "count": 25,
+      "mean_score": 43.242412109375,
+      "max_score": 53.2219123840332,
+      "min_score": 32.45612716674805,
+      "detected_at_threshold": 23,
+      "detect_rate": 0.92,
+      "label": 1
+    },
+    "thread_side": {
+      "count": 23,
+      "mean_score": 34.19608265420665,
+      "max_score": 39.77842330932617,
+      "min_score": 29.884868621826172,
+      "detected_at_threshold": 12,
+      "detect_rate": 0.5217391304347826,
+      "label": 1
+    },
+    "thread_top": {
+      "count": 23,
+      "mean_score": 39.2180582958719,
+      "max_score": 44.926124572753906,
+      "min_score": 30.0119571685791,
+      "detected_at_threshold": 22,
+      "detect_rate": 0.9565217391304348,
+      "label": 1
+    }
+  },
+  "failures": {
+    "top_missed_abnormal": [
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/022.png",
+        "type": "scratch_head",
+        "score": 29.7286376953125
+      },
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/013.png",
+        "type": "thread_side",
+        "score": 29.884868621826172
+      },
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/003.png",
+        "type": "thread_top",
+        "score": 30.0119571685791
+      }
+    ],
+    "top_false_alarm_normal": [
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/035.png",
+        "type": "good",
+        "score": 35.330970764160156
+      },
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/005.png",
+        "type": "good",
+        "score": 35.245201110839844
+      },
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/025.png",
+        "type": "good",
+        "score": 34.584197998046875
+      }
+    ]
+  },
+  "per_image": [
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/000.png",
+      "type": "good",
+      "label": 0,
+      "score": 30.332544326782227,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/001.png",
+      "type": "good",
+      "label": 0,
+      "score": 28.841796875,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/002.png",
+      "type": "good",
+      "label": 0,
+      "score": 27.90837287902832,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/003.png",
+      "type": "good",
+      "label": 0,
+      "score": 34.23210144042969,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/004.png",
+      "type": "good",
+      "label": 0,
+      "score": 31.35284996032715,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/005.png",
+      "type": "good",
+      "label": 0,
+      "score": 35.245201110839844,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/006.png",
+      "type": "good",
+      "label": 0,
+      "score": 27.257984161376953,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/007.png",
+      "type": "good",
+      "label": 0,
+      "score": 27.719091415405273,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/008.png",
+      "type": "good",
+      "label": 0,
+      "score": 29.519332885742188,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/009.png",
+      "type": "good",
+      "label": 0,
+      "score": 30.28959083557129,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/010.png",
+      "type": "good",
+      "label": 0,
+      "score": 29.760173797607422,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/011.png",
+      "type": "good",
+      "label": 0,
+      "score": 30.242612838745117,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/012.png",
+      "type": "good",
+      "label": 0,
+      "score": 29.76399040222168,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/013.png",
+      "type": "good",
+      "label": 0,
+      "score": 29.065488815307617,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/014.png",
+      "type": "good",
+      "label": 0,
+      "score": 33.249698638916016,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/015.png",
+      "type": "good",
+      "label": 0,
+      "score": 29.628358840942383,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/016.png",
+      "type": "good",
+      "label": 0,
+      "score": 29.0012149810791,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/017.png",
+      "type": "good",
+      "label": 0,
+      "score": 26.990110397338867,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/018.png",
+      "type": "good",
+      "label": 0,
+      "score": 30.084049224853516,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/019.png",
+      "type": "good",
+      "label": 0,
+      "score": 30.491228103637695,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/020.png",
+      "type": "good",
+      "label": 0,
+      "score": 29.652137756347656,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/021.png",
+      "type": "good",
+      "label": 0,
+      "score": 27.709882736206055,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/022.png",
+      "type": "good",
+      "label": 0,
+      "score": 31.28017807006836,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/023.png",
+      "type": "good",
+      "label": 0,
+      "score": 29.960634231567383,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/024.png",
+      "type": "good",
+      "label": 0,
+      "score": 30.722698211669922,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/025.png",
+      "type": "good",
+      "label": 0,
+      "score": 34.584197998046875,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/026.png",
+      "type": "good",
+      "label": 0,
+      "score": 27.88465118408203,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/027.png",
+      "type": "good",
+      "label": 0,
+      "score": 30.462261199951172,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/028.png",
+      "type": "good",
+      "label": 0,
+      "score": 27.31720542907715,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/029.png",
+      "type": "good",
+      "label": 0,
+      "score": 29.043922424316406,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/030.png",
+      "type": "good",
+      "label": 0,
+      "score": 28.894622802734375,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/031.png",
+      "type": "good",
+      "label": 0,
+      "score": 30.704547882080078,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/032.png",
+      "type": "good",
+      "label": 0,
+      "score": 28.521373748779297,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/033.png",
+      "type": "good",
+      "label": 0,
+      "score": 26.92350959777832,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/034.png",
+      "type": "good",
+      "label": 0,
+      "score": 27.428447723388672,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/035.png",
+      "type": "good",
+      "label": 0,
+      "score": 35.330970764160156,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/036.png",
+      "type": "good",
+      "label": 0,
+      "score": 27.13567352294922,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/037.png",
+      "type": "good",
+      "label": 0,
+      "score": 28.674585342407227,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/038.png",
+      "type": "good",
+      "label": 0,
+      "score": 30.81189727783203,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/039.png",
+      "type": "good",
+      "label": 0,
+      "score": 28.325712203979492,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/good/040.png",
+      "type": "good",
+      "label": 0,
+      "score": 27.116960525512695,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/000.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 36.6089973449707,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/001.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 35.42588806152344,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/002.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 30.63199806213379,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/003.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 40.6563835144043,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/004.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 40.090797424316406,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/005.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 37.76234817504883,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/006.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 37.32828903198242,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/007.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 37.75979232788086,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/008.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 37.72134017944336,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/009.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 35.82230758666992,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/010.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 35.09183883666992,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/011.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 35.125064849853516,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/012.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 32.2642822265625,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/013.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 35.2869873046875,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/014.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 37.13420486450195,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/015.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 38.21092224121094,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/016.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 41.2329216003418,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/017.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 33.202667236328125,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/018.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 36.08870315551758,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/019.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 30.308961868286133,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/020.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 33.63627624511719,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/021.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 34.380157470703125,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/022.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 31.100921630859375,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/manipulated_front/023.png",
+      "type": "manipulated_front",
+      "label": 1,
+      "score": 32.12964630126953,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/000.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 41.45106887817383,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/001.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 37.34417724609375,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/002.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 37.71609878540039,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/003.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 30.14361000061035,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/004.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 35.61874008178711,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/005.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 37.157798767089844,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/006.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 33.9912223815918,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/007.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 35.110748291015625,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/008.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 38.236358642578125,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/009.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 37.1962776184082,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/010.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 37.99834060668945,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/011.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 39.35661315917969,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/012.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 40.036502838134766,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/013.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 39.105796813964844,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/014.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 31.20631980895996,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/015.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 44.35238265991211,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/016.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 37.37752914428711,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/017.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 36.94683074951172,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/018.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 34.93914794921875,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/019.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 38.56283950805664,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/020.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 35.28868865966797,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/021.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 40.204978942871094,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/022.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 29.7286376953125,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_head/023.png",
+      "type": "scratch_head",
+      "label": 1,
+      "score": 34.65028762817383,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/000.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 33.82952880859375,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/001.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 50.83364486694336,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/002.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 34.84798812866211,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/003.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 49.79926300048828,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/004.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 40.01020812988281,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/005.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 32.45612716674805,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/006.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 44.410308837890625,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/007.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 46.9134407043457,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/008.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 50.72679901123047,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/009.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 53.2219123840332,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/010.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 42.15831756591797,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/011.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 34.976661682128906,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/012.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 37.950496673583984,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/013.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 43.924888610839844,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/014.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 48.21139144897461,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/015.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 45.988433837890625,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/016.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 50.38687515258789,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/017.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 41.70370864868164,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/018.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 44.61713790893555,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/019.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 42.571109771728516,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/020.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 51.137142181396484,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/021.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 34.95712661743164,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/022.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 39.99598693847656,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/023.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 37.804927825927734,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/scratch_neck/024.png",
+      "type": "scratch_neck",
+      "label": 1,
+      "score": 47.62687683105469,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/000.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 30.302536010742188,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/001.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 35.243980407714844,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/002.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 35.91900634765625,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/003.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 32.545875549316406,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/004.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 35.22574234008789,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/005.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 38.02241897583008,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/006.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 33.73299026489258,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/007.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 37.546661376953125,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/008.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 31.322757720947266,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/009.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 33.466453552246094,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/010.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 30.53084373474121,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/011.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 38.59294509887695,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/012.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 31.4705867767334,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/013.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 29.884868621826172,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/014.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 35.835453033447266,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/015.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 32.70412826538086,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/016.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 32.675052642822266,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/017.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 39.77842330932617,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/018.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 34.94769287109375,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/019.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 34.89109802246094,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/020.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 31.55523109436035,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/021.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 35.00772476196289,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_side/022.png",
+      "type": "thread_side",
+      "label": 1,
+      "score": 35.307430267333984,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/000.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 43.1590690612793,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/001.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 38.18914031982422,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/002.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 36.84159851074219,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/003.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 30.0119571685791,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/004.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 41.050537109375,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/005.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 41.40883255004883,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/006.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 36.662452697753906,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/007.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 44.926124572753906,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/008.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 34.16908645629883,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/009.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 37.60979080200195,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/010.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 36.59279251098633,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/011.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 40.56821060180664,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/012.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 39.017581939697266,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/013.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 40.024539947509766,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/014.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 41.343505859375,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/015.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 35.41644287109375,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/016.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 36.64518737792969,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/017.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 36.46180725097656,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/018.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 40.904842376708984,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/019.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 43.9948616027832,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/020.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 43.7441520690918,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/021.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 42.00685119628906,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\screw/test/thread_top/022.png",
+      "type": "thread_top",
+      "label": 1,
+      "score": 41.26597595214844,
+      "decision": "NG"
+    }
+  ],
+  "test_inference_seconds": 93.29322820000016,
+  "data_counts": {
+    "train_good": 320,
+    "test_good": 41,
+    "test_abnormal": 119
+  }
+}

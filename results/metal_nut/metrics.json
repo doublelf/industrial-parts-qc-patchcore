@@ -1,0 +1,962 @@
+{
+  "category": "metal_nut",
+  "evaluated_at": "2026-11-24T15:49:18",
+  "seed": 42,
+  "device": "CPU: 16 threads",
+  "image_size": [
+    256,
+    256
+  ],
+  "anomalib_version": "2.7.1",
+  "n_test": 115,
+  "n_normal": 22,
+  "n_abnormal": 93,
+  "image_auroc": 0.9980449657869013,
+  "image_ap": 0.9995483581916984,
+  "pixel_auroc": 0.9869974322736622,
+  "pixel_ap": 0.8864454642087742,
+  "aupro": 0.9410223960876465,
+  "aupro_supported": true,
+  "aupro_fpr_limit": 0.3,
+  "threshold": {
+    "threshold": 40.65822458000183,
+    "tp": 91,
+    "tn": 22,
+    "fp": 0,
+    "fn": 2,
+    "accuracy": 0.9826086956521739,
+    "precision": 1.0,
+    "recall": 0.978494623655914,
+    "f1": 0.9891304347826086,
+    "n_normal": 22,
+    "n_abnormal": 93
+  },
+  "threshold_source": {
+    "threshold": 40.65822458000183,
+    "strategy": "val_normal_robust",
+    "quantile": null,
+    "k": 3.0,
+    "val_fp_rate": 0.022727272727272728,
+    "n_val": 44,
+    "val_median": 35.13854217529297,
+    "val_mad": 1.2409915924072266,
+    "val_robust_sigma": 1.839894134902954,
+    "val_mean": 35.55653424696489,
+    "val_std": 2.2816762950122476,
+    "val_max": 41.870269775390625,
+    "val_min": 29.50845718383789
+  },
+  "latency": {
+    "mean_ms": 732.1970316666315,
+    "p50_ms": 729.3202000000747,
+    "p95_ms": 826.6861500020241,
+    "p99_ms": 896.6622139971876,
+    "min_ms": 643.9438999987033,
+    "max_ms": 940.2132999966852,
+    "n_samples": 60,
+    "includes_image_read": true,
+    "resolution": [
+      256,
+      256
+    ],
+    "device": "CPU: 16 threads",
+    "n_images": 20,
+    "repeats": 3
+  },
+  "per_type": {
+    "bent": {
+      "count": 25,
+      "mean_score": 54.93384338378906,
+      "max_score": 60.25395965576172,
+      "min_score": 40.31391143798828,
+      "detected_at_threshold": 24,
+      "detect_rate": 0.96,
+      "label": 1
+    },
+    "color": {
+      "count": 22,
+      "mean_score": 49.49021408774636,
+      "max_score": 56.3804817199707,
+      "min_score": 39.29877853393555,
+      "detected_at_threshold": 21,
+      "detect_rate": 0.9545454545454546,
+      "label": 1
+    },
+    "flip": {
+      "count": 23,
+      "mean_score": 56.91485844487729,
+      "max_score": 59.0197868347168,
+      "min_score": 54.30815124511719,
+      "detected_at_threshold": 23,
+      "detect_rate": 1.0,
+      "label": 1
+    },
+    "good": {
+      "count": 22,
+      "mean_score": 36.35907710682262,
+      "max_score": 40.51107406616211,
+      "min_score": 32.056373596191406,
+      "detected_at_threshold": 0,
+      "detect_rate": 0.0,
+      "label": 0
+    },
+    "scratch": {
+      "count": 23,
+      "mean_score": 50.22628817350968,
+      "max_score": 56.15513229370117,
+      "min_score": 40.96754837036133,
+      "detected_at_threshold": 23,
+      "detect_rate": 1.0,
+      "label": 1
+    }
+  },
+  "failures": {
+    "top_missed_abnormal": [
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/004.png",
+        "type": "color",
+        "score": 39.29877853393555
+      },
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/007.png",
+        "type": "bent",
+        "score": 40.31391143798828
+      },
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/000.png",
+        "type": "scratch",
+        "score": 40.96754837036133
+      }
+    ],
+    "top_false_alarm_normal": [
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/016.png",
+        "type": "good",
+        "score": 40.51107406616211
+      },
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/007.png",
+        "type": "good",
+        "score": 39.84868621826172
+      },
+      {
+        "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/011.png",
+        "type": "good",
+        "score": 39.7953987121582
+      }
+    ]
+  },
+  "per_image": [
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/000.png",
+      "type": "bent",
+      "label": 1,
+      "score": 55.144229888916016,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/001.png",
+      "type": "bent",
+      "label": 1,
+      "score": 53.935462951660156,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/002.png",
+      "type": "bent",
+      "label": 1,
+      "score": 52.09994125366211,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/003.png",
+      "type": "bent",
+      "label": 1,
+      "score": 55.73779296875,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/004.png",
+      "type": "bent",
+      "label": 1,
+      "score": 54.385520935058594,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/005.png",
+      "type": "bent",
+      "label": 1,
+      "score": 56.93854904174805,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/006.png",
+      "type": "bent",
+      "label": 1,
+      "score": 48.30215072631836,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/007.png",
+      "type": "bent",
+      "label": 1,
+      "score": 40.31391143798828,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/008.png",
+      "type": "bent",
+      "label": 1,
+      "score": 53.6195068359375,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/009.png",
+      "type": "bent",
+      "label": 1,
+      "score": 60.014732360839844,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/010.png",
+      "type": "bent",
+      "label": 1,
+      "score": 60.25395965576172,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/011.png",
+      "type": "bent",
+      "label": 1,
+      "score": 60.12679672241211,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/012.png",
+      "type": "bent",
+      "label": 1,
+      "score": 59.10795211791992,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/013.png",
+      "type": "bent",
+      "label": 1,
+      "score": 53.20341491699219,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/014.png",
+      "type": "bent",
+      "label": 1,
+      "score": 50.22465133666992,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/015.png",
+      "type": "bent",
+      "label": 1,
+      "score": 52.687198638916016,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/016.png",
+      "type": "bent",
+      "label": 1,
+      "score": 56.253177642822266,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/017.png",
+      "type": "bent",
+      "label": 1,
+      "score": 58.28330612182617,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/018.png",
+      "type": "bent",
+      "label": 1,
+      "score": 52.82660675048828,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/019.png",
+      "type": "bent",
+      "label": 1,
+      "score": 56.2631721496582,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/020.png",
+      "type": "bent",
+      "label": 1,
+      "score": 59.49246597290039,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/021.png",
+      "type": "bent",
+      "label": 1,
+      "score": 60.25080490112305,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/022.png",
+      "type": "bent",
+      "label": 1,
+      "score": 50.445526123046875,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/023.png",
+      "type": "bent",
+      "label": 1,
+      "score": 53.79860305786133,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/bent/024.png",
+      "type": "bent",
+      "label": 1,
+      "score": 59.63665008544922,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/000.png",
+      "type": "color",
+      "label": 1,
+      "score": 49.184722900390625,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/001.png",
+      "type": "color",
+      "label": 1,
+      "score": 43.37642288208008,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/002.png",
+      "type": "color",
+      "label": 1,
+      "score": 51.4681396484375,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/003.png",
+      "type": "color",
+      "label": 1,
+      "score": 56.274539947509766,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/004.png",
+      "type": "color",
+      "label": 1,
+      "score": 39.29877853393555,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/005.png",
+      "type": "color",
+      "label": 1,
+      "score": 42.6024169921875,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/006.png",
+      "type": "color",
+      "label": 1,
+      "score": 54.13381576538086,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/007.png",
+      "type": "color",
+      "label": 1,
+      "score": 51.28889846801758,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/008.png",
+      "type": "color",
+      "label": 1,
+      "score": 52.42940139770508,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/009.png",
+      "type": "color",
+      "label": 1,
+      "score": 55.253639221191406,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/010.png",
+      "type": "color",
+      "label": 1,
+      "score": 46.95918655395508,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/011.png",
+      "type": "color",
+      "label": 1,
+      "score": 55.242130279541016,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/012.png",
+      "type": "color",
+      "label": 1,
+      "score": 49.369842529296875,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/013.png",
+      "type": "color",
+      "label": 1,
+      "score": 50.31217575073242,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/014.png",
+      "type": "color",
+      "label": 1,
+      "score": 56.3804817199707,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/015.png",
+      "type": "color",
+      "label": 1,
+      "score": 47.49336624145508,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/016.png",
+      "type": "color",
+      "label": 1,
+      "score": 47.46529769897461,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/017.png",
+      "type": "color",
+      "label": 1,
+      "score": 48.99214172363281,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/018.png",
+      "type": "color",
+      "label": 1,
+      "score": 43.295989990234375,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/019.png",
+      "type": "color",
+      "label": 1,
+      "score": 46.592247009277344,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/020.png",
+      "type": "color",
+      "label": 1,
+      "score": 52.17070388793945,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/color/021.png",
+      "type": "color",
+      "label": 1,
+      "score": 49.20037078857422,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/000.png",
+      "type": "flip",
+      "label": 1,
+      "score": 59.0197868347168,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/001.png",
+      "type": "flip",
+      "label": 1,
+      "score": 58.919105529785156,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/002.png",
+      "type": "flip",
+      "label": 1,
+      "score": 57.24077224731445,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/003.png",
+      "type": "flip",
+      "label": 1,
+      "score": 55.7275390625,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/004.png",
+      "type": "flip",
+      "label": 1,
+      "score": 55.43340301513672,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/005.png",
+      "type": "flip",
+      "label": 1,
+      "score": 58.46134567260742,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/006.png",
+      "type": "flip",
+      "label": 1,
+      "score": 56.341365814208984,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/007.png",
+      "type": "flip",
+      "label": 1,
+      "score": 57.72412872314453,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/008.png",
+      "type": "flip",
+      "label": 1,
+      "score": 58.559383392333984,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/009.png",
+      "type": "flip",
+      "label": 1,
+      "score": 58.97148132324219,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/010.png",
+      "type": "flip",
+      "label": 1,
+      "score": 55.25508117675781,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/011.png",
+      "type": "flip",
+      "label": 1,
+      "score": 55.51251220703125,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/012.png",
+      "type": "flip",
+      "label": 1,
+      "score": 56.79948806762695,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/013.png",
+      "type": "flip",
+      "label": 1,
+      "score": 57.583744049072266,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/014.png",
+      "type": "flip",
+      "label": 1,
+      "score": 57.549278259277344,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/015.png",
+      "type": "flip",
+      "label": 1,
+      "score": 58.515968322753906,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/016.png",
+      "type": "flip",
+      "label": 1,
+      "score": 56.04305648803711,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/017.png",
+      "type": "flip",
+      "label": 1,
+      "score": 55.87141418457031,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/018.png",
+      "type": "flip",
+      "label": 1,
+      "score": 56.51362609863281,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/019.png",
+      "type": "flip",
+      "label": 1,
+      "score": 57.89595413208008,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/020.png",
+      "type": "flip",
+      "label": 1,
+      "score": 54.30815124511719,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/021.png",
+      "type": "flip",
+      "label": 1,
+      "score": 54.92786407470703,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/flip/022.png",
+      "type": "flip",
+      "label": 1,
+      "score": 55.86729431152344,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/000.png",
+      "type": "good",
+      "label": 0,
+      "score": 35.128639221191406,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/001.png",
+      "type": "good",
+      "label": 0,
+      "score": 33.58671951293945,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/002.png",
+      "type": "good",
+      "label": 0,
+      "score": 37.67257308959961,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/003.png",
+      "type": "good",
+      "label": 0,
+      "score": 32.056373596191406,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/004.png",
+      "type": "good",
+      "label": 0,
+      "score": 35.90272521972656,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/005.png",
+      "type": "good",
+      "label": 0,
+      "score": 36.90026092529297,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/006.png",
+      "type": "good",
+      "label": 0,
+      "score": 35.200408935546875,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/007.png",
+      "type": "good",
+      "label": 0,
+      "score": 39.84868621826172,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/008.png",
+      "type": "good",
+      "label": 0,
+      "score": 38.4390983581543,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/009.png",
+      "type": "good",
+      "label": 0,
+      "score": 35.496612548828125,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/010.png",
+      "type": "good",
+      "label": 0,
+      "score": 37.010009765625,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/011.png",
+      "type": "good",
+      "label": 0,
+      "score": 39.7953987121582,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/012.png",
+      "type": "good",
+      "label": 0,
+      "score": 35.15564727783203,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/013.png",
+      "type": "good",
+      "label": 0,
+      "score": 37.96268844604492,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/014.png",
+      "type": "good",
+      "label": 0,
+      "score": 37.36466979980469,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/015.png",
+      "type": "good",
+      "label": 0,
+      "score": 35.784976959228516,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/016.png",
+      "type": "good",
+      "label": 0,
+      "score": 40.51107406616211,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/017.png",
+      "type": "good",
+      "label": 0,
+      "score": 38.15718078613281,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/018.png",
+      "type": "good",
+      "label": 0,
+      "score": 33.3026237487793,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/019.png",
+      "type": "good",
+      "label": 0,
+      "score": 34.36903381347656,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/020.png",
+      "type": "good",
+      "label": 0,
+      "score": 35.2238655090332,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/good/021.png",
+      "type": "good",
+      "label": 0,
+      "score": 35.03042984008789,
+      "decision": "OK"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/000.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 40.96754837036133,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/001.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 46.848915100097656,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/002.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 48.87809371948242,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/003.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 48.0876350402832,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/004.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 50.864627838134766,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/005.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 51.58836364746094,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/006.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 52.44829177856445,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/007.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 55.93409729003906,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/008.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 54.546470642089844,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/009.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 49.932559967041016,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/010.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 49.569820404052734,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/011.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 53.539119720458984,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/012.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 49.93898010253906,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/013.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 54.5565299987793,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/014.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 50.763877868652344,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/015.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 52.344871520996094,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/016.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 49.75859832763672,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/017.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 50.88212203979492,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/018.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 56.15513229370117,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/019.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 51.716190338134766,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/020.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 43.8997917175293,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/021.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 46.2030029296875,
+      "decision": "NG"
+    },
+    {
+      "file": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\data\\mvtec\\metal_nut/test/scratch/022.png",
+      "type": "scratch",
+      "label": 1,
+      "score": 45.77998733520508,
+      "decision": "NG"
+    }
+  ],
+  "test_inference_seconds": 77.44451659999686,
+  "data_counts": {
+    "train_good": 220,
+    "test_good": 22,
+    "test_abnormal": 93
+  }
+}

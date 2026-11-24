@@ -1,0 +1,49 @@
+2026-11-24 15:36:31 | INFO    | OK   加载模型 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\model.pt
+2026-11-24 15:36:32 | WARNING | ONNX 导出第 1 次尝试失败: ModuleNotFoundError: ONNX export requires the optional `onnxscript` dependency. Install `anomalib[openvino]` or `onnxscript`.
+2026-11-24 15:36:32 | WARNING | ONNX 导出第 2 次尝试失败: ValueError: The legacy ONNX exporter path (`dynamo=False`) was removed in anomalib 2.7.0. Install `anomalib[openvino]` (provides `onnxscript`) and use `dynamo=True` (the default).
+2026-11-24 15:36:33 | WARNING | FAIL ONNX 导出 ValueError: The legacy ONNX exporter path (`dynamo=False`) was removed in anomalib 2.7.0. Install `anomalib[openvino]` (provides `onnxscript`) and use `dynamo=True` (the default).
+2026-11-24 15:37:36 | INFO    | OK   加载模型 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\model.pt
+2026-11-24 15:37:58 | INFO    | OK   ONNX 导出 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\export\weights\onnx\model.onnx
+2026-11-24 15:38:00 | INFO    | OK   ONNX Runtime 加载 input=input ['batch_size', 3, 256, 256] outputs=['pred_score', 'pred_label', 'anomaly_map', 'pred_mask']
+2026-11-24 15:38:02 | INFO    | PyTorch 参考分数: 55.144218
+2026-11-24 15:38:02 | WARNING |   raw_[0,1] -> InvalidArgument: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Got invalid dimensions for input: input for the following indices
+ index: 2 Got: 700 Expected: 256
+ index: 3 Got: 700 Expected: 256
+ Please fix either the inputs/outputs or the model.
+2026-11-24 15:38:02 | INFO    |   normalized -> score=1.000000 (|diff|=54.144218), map_max_abs_diff=52.7181396484375
+2026-11-24 15:38:02 | WARNING | FAIL 数值验证 ONNX 与 PyTorch 输出不一致
+2026-11-24 15:38:55 | INFO    | OK   加载模型 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\model.pt
+2026-11-24 15:39:18 | INFO    | OK   ONNX 导出 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\export\weights\onnx\model.onnx
+2026-11-24 15:39:20 | INFO    | OK   ONNX Runtime 加载 input=input ['batch_size', 3, 256, 256] outputs=['pred_score', 'pred_label', 'anomaly_map', 'pred_mask']
+2026-11-24 15:39:22 | INFO    | PyTorch 完整管线参考分数（归一化后）: 1.000000
+2026-11-24 15:39:22 | INFO    |   resized_256_raw_[0,1] -> score=1.000000 (|diff|=0.000000), map_max_abs_diff=0.18984133005142212
+2026-11-24 15:39:22 | INFO    |   resized_256_imagenet_normalized -> score=1.000000 (|diff|=0.000000), map_max_abs_diff=1.0
+2026-11-24 15:39:22 | WARNING | FAIL 数值验证 ONNX 与 PyTorch 输出不一致
+2026-11-24 15:40:58 | INFO    | OK   加载模型 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\model.pt
+2026-11-24 15:41:21 | INFO    | OK   ONNX 导出 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\export\weights\onnx\model.onnx
+2026-11-24 15:41:24 | INFO    | OK   ONNX Runtime 加载 input=input ['batch_size', 3, 256, 256] outputs=['pred_score', 'anomaly_map']
+2026-11-24 15:41:26 | INFO    | PyTorch 原始 PatchCore 参考分数: 54.929199
+2026-11-24 15:41:26 | INFO    |   resized_256_raw_[0,1] -> score=55.144245 (|diff|=0.215046), map_max_abs_diff=5.780252456665039
+2026-11-24 15:41:26 | INFO    |   resized_256_imagenet_normalized -> score=482.914795 (|diff|=427.985596), map_max_abs_diff=470.63006591796875
+2026-11-24 15:41:26 | WARNING | FAIL 数值验证 ONNX 与 PyTorch 输出不一致
+2026-11-24 15:42:13 | INFO    | OK   加载模型 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\model.pt
+2026-11-24 15:42:31 | INFO    | OK   ONNX 导出 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\export\weights\onnx\model.onnx
+2026-11-24 15:42:33 | INFO    | OK   ONNX Runtime 加载 input=input ['batch_size', 3, 256, 256] outputs=['pred_score', 'anomaly_map']
+2026-11-24 15:42:35 | INFO    | PyTorch 原始 PatchCore 参考分数: 54.929199
+2026-11-24 15:42:35 | INFO    |   resized_256_raw_[0,1] -> score=55.144245 (|diff|=0.215046), map_max_abs_diff=5.780252456665039
+2026-11-24 15:42:35 | INFO    |   resized_256_imagenet_normalized -> score=482.914795 (|diff|=427.985596), map_max_abs_diff=470.63006591796875
+2026-11-24 15:42:35 | WARNING | FAIL 数值验证 ONNX 与 PyTorch 输出不一致
+2026-11-24 15:46:07 | INFO    | OK   加载模型 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\model.pt
+2026-11-24 15:46:24 | INFO    | OK   ONNX 导出 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\export\weights\onnx\model.onnx
+2026-11-24 15:46:26 | INFO    | OK   ONNX Runtime 加载 input=input ['batch_size', 3, 256, 256] outputs=['pred_score', 'anomaly_map']
+2026-11-24 15:46:28 | INFO    | PyTorch 原始 PatchCore 参考分数: 55.144218
+2026-11-24 15:46:28 | INFO    |   resized_256_raw_[0,1] -> score=55.144245 (|diff|=0.000027), map_max_abs_diff=0.0002574920654296875
+2026-11-24 15:46:28 | INFO    |   resized_256_imagenet_normalized -> score=482.914795 (|diff|=427.770576), map_max_abs_diff=473.21209716796875
+2026-11-24 15:46:28 | INFO    | OK   数值验证 最大分数误差 2.67e-05
+2026-11-24 15:58:31 | INFO    | OK   加载模型 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\model.pt
+2026-11-24 15:58:40 | INFO    | OK   ONNX 导出 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\export\weights\onnx\model.onnx
+2026-11-24 15:58:41 | INFO    | OK   ONNX Runtime 加载 input=input ['batch_size', 3, 256, 256] outputs=['pred_score', 'anomaly_map']
+2026-11-24 15:58:42 | INFO    | PyTorch 原始 PatchCore 参考分数: 55.144218
+2026-11-24 15:58:42 | INFO    |   resized_256_raw_[0,1] -> score=55.144245 (|diff|=0.000027), map_max_abs_diff=0.0002574920654296875
+2026-11-24 15:58:42 | INFO    |   resized_256_imagenet_normalized -> score=482.914795 (|diff|=427.770576), map_max_abs_diff=473.21209716796875
+2026-11-24 15:58:42 | INFO    | OK   数值验证 最大分数误差 2.67e-05

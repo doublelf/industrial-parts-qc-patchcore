@@ -1,0 +1,58 @@
+{
+  "category": "metal_nut",
+  "status": "success",
+  "steps": [
+    {
+      "step": "加载模型",
+      "ok": true,
+      "detail": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\results\\metal_nut\\model.pt"
+    },
+    {
+      "step": "ONNX 导出",
+      "ok": true,
+      "detail": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\results\\metal_nut\\export\\weights\\onnx\\model.onnx"
+    },
+    {
+      "step": "ONNX Runtime 加载",
+      "ok": true,
+      "detail": "input=input ['batch_size', 3, 256, 256] outputs=['pred_score', 'anomaly_map']"
+    },
+    {
+      "step": "数值验证",
+      "ok": true,
+      "detail": "最大分数误差 2.67e-05"
+    }
+  ],
+  "onnx_path": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\results\\metal_nut\\export\\weights\\onnx\\model.onnx",
+  "onnx_external_data": true,
+  "onnx_size_mb": 200.67,
+  "onnx_check": {
+    "resized_256_raw_[0,1]": {
+      "score": 55.14424514770508,
+      "score_abs_diff": 2.6702880859375e-05,
+      "map_shape": [
+        256,
+        256
+      ],
+      "map_max_abs_diff": 0.0002574920654296875
+    },
+    "resized_256_imagenet_normalized": {
+      "score": 482.914794921875,
+      "score_abs_diff": 427.7705764770508,
+      "map_shape": [
+        256,
+        256
+      ],
+      "map_max_abs_diff": 473.21209716796875
+    }
+  },
+  "pytorch_reference": {
+    "score": 55.14421844482422,
+    "map_shape": [
+      256,
+      256
+    ],
+    "score_space": "raw PatchCore distance (no post-processor)"
+  },
+  "verified_input_format": "resized_256_raw_[0,1]"
+}

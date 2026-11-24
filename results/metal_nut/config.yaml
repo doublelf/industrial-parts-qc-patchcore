@@ -1,0 +1,45 @@
+project:
+  name: industrial-parts-qc-patchcore
+  seed: 42
+  results_root: results
+  outputs_root: outputs
+data:
+  root: data/mvtec
+  image_size:
+  - 256
+  - 256
+  train_batch_size: 8
+  eval_batch_size: 8
+  num_workers: 0
+  val_split:
+    enabled: true
+    ratio: 0.2
+model:
+  name: patchcore
+  backbone: wide_resnet50_2
+  layers:
+  - layer2
+  - layer3
+  pre_trained: true
+  coreset_sampling_ratio: 0.1
+  num_neighbors: 9
+threshold:
+  strategy: val_normal_robust
+  quantile: 0.99
+  k: 3.0
+runtime:
+  device: auto
+  latency_repeats: 5
+  resolved_device: cpu
+evaluation:
+  aupro_fpr_limit: 0.3
+  n_abnormal_vis: 6
+  n_normal_vis: 3
+categories:
+  metal_nut:
+    enabled: true
+  screw:
+    enabled: true
+export:
+  enabled: true
+  onnx_opset: 17

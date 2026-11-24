@@ -1,0 +1,84 @@
+# =============================================================================
+# industrial-parts-qc-patchcore 统一配置
+# 所有脚本（train / evaluate / predict / check_data）都只从这里读参数，
+# 不在代码里硬编码类别、backbone、coreset 比例、尺寸、阈值策略与输出目录。
+# =============================================================================
+
+project:
+  name: industrial-parts-qc-patchcore
+  # 全局随机种子，固定为 42 以保证可复现（数据划分、可视化抽样共用）
+  seed: 42
+  # 训练产物根目录：results/<category>/...
+  results_root: results
+  # 推理叠加图根目录：outputs/<category>/...
+  outputs_root: outputs
+
+data:
+  # MVTec AD 根目录，其下应直接是类别文件夹，例如 data/mvtec/metal_nut/train/good
+  root: data/mvtec
+  # 输入分辨率 [H, W]，PatchCore 在 256x256 起步
+  image_size: [256, 256]
+  train_batch_size: 8
+  eval_batch_size: 8
+  num_workers: 0
+  # 只使用官方 train/good 作为正常样本；其中再切一部分作为验证集，
+  # 仅用于确定判定阈值（不参与记忆库构建之外的任何 test 信息）
+  val_split:
+    enabled: true
+    ratio: 0.2
+
+model:
+  name: patchcore
+  backbone: wide_resnet50_2
+  # PatchCore 论文默认使用 layer2 + layer3 的多尺度特征
+  layers: [layer2, layer3]
+  pre_trained: true
+  # coreset 采样比例：记忆库保留 10% 的 patch 特征
+  coreset_sampling_ratio: 0.1
+  # 最近邻数量
+  num_neighbors: 9
+
+threshold:
+  # 阈值只允许用验证集（官方 train/good 中切出的正常样本）确定：
+  #   val_normal_robust   -> median + k*1.4826*MAD（稳健 3σ，抗离群正常样本；默认）
+  #   val_normal_quantile -> 验证集正常样本分数的分位数
+  #   val_normal_max      -> 验证集正常样本分数的最大值
+  #   val_normal_mean_std -> mean + k*std（非稳健，作为对照）
+  # 严禁在 test 集上调阈值。
+  strategy: val_normal_robust
+  k: 3.0
+  quantile: 0.99
+
+runtime:
+  # auto: 有 CUDA 用 GPU，否则回退 CPU 并在日志中说明
+  device: auto
+  # 单张推理耗时统计的重复次数（预热后计时）
+  latency_repeats: 5
+
+evaluation:
+  # AU-PRO 的 FPR 上限（MVTec 论文使用 0.3）
+  aupro_fpr_limit: 0.3
+  # 可视化抽样数量
+  n_abnormal_vis: 6
+  n_normal_vis: 3
+
+# 第一阶段 metal_nut，第二阶段 screw；训练/评估脚本用 --category 覆盖
+categories:
+  metal_nut:
+    enabled: true
+  screw:
+    enabled: true
+
+export:
+  # 尝试导出 ONNX，用于部署前验证
+  enabled: true
+  onnx_opset: 17
+
+# 演示界面（模拟产线，不是真实产线对接）
+ui:
+  host: 127.0.0.1          # 默认只绑本机
+  port: 8000
+  live_dir: outputs/live   # 叠加图/原图/live_log.csv
+  demo_images_root: demo_images
+  default_category: metal_nut
+  default_interval_s: 2.0  # 默认上料节拍（秒）

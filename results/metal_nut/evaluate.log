@@ -1,0 +1,45 @@
+2026-11-24 14:56:14 | INFO    | torch=2.14.1+cpu | cuda_available=False | cuda_version=None
+2026-11-24 14:56:14 | WARNING | 设备策略 auto -> 未检测到可用 CUDA，自动回退到 CPU（推理/建库会明显变慢）。
+2026-11-24 14:56:14 | INFO    | ==========================================================================
+2026-11-24 14:56:14 | INFO    | PatchCore 评估 | 类别=metal_nut | 设备=CPU: 16 threads | 输入尺寸=[256, 256]
+2026-11-24 14:56:14 | INFO    | ==========================================================================
+2026-11-24 14:56:14 | INFO    | 阈值来自验证集: 40.871154 | 策略=val_normal_quantile | 验证集正常样本数=44 | 验证集误报率=0.0227
+2026-11-24 14:56:36 | INFO    | 模型已加载: 记忆库=(18022, 1536)
+2026-11-24 14:57:51 | INFO    | 测试集推理完成: 115 张 | 耗时=71.7s | 平均=623.5 ms/张（含读取与预处理）
+2026-11-24 14:58:02 | INFO    | 图像级 AUROC=0.9980 | 图像级 AP=0.9995
+2026-11-24 14:58:02 | INFO    | 像素级 AUROC=0.9870 | 像素级 AP=0.8864
+2026-11-24 14:58:02 | INFO    | AU-PRO=0.9410
+2026-11-24 14:58:02 | INFO    | 阈值=40.871154 -> 误报 FP=0 | 漏检 FN=2 | Precision=1.0000 | Recall=0.9785
+2026-11-24 14:58:41 | INFO    | 单张耗时: mean=644.9 ms | p99=744.6 ms | n=60 | 设备=CPU: 16 threads | 分辨率=256x256 | 含图片读取
+2026-11-24 14:58:43 | INFO    | 可视化已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\visualizations\comparison_grid.png
+2026-11-24 14:58:43 | INFO    | 指标已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\metrics.json 和 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\metrics.md
+2026-11-24 15:30:49 | INFO    | torch=2.14.1+cpu | cuda_available=False | cuda_version=None
+2026-11-24 15:30:49 | WARNING | 设备策略 auto -> 未检测到可用 CUDA，自动回退到 CPU（推理/建库会明显变慢）。
+2026-11-24 15:30:49 | INFO    | ==========================================================================
+2026-11-24 15:30:49 | INFO    | PatchCore 评估 | 类别=metal_nut | 设备=CPU: 16 threads | 输入尺寸=[256, 256]
+2026-11-24 15:30:49 | INFO    | ==========================================================================
+2026-11-24 15:30:49 | INFO    | 阈值来自验证集: 40.658225 | 策略=val_normal_robust | 验证集正常样本数=44 | 验证集误报率=0.0227
+2026-11-24 15:30:57 | INFO    | 模型已加载: 记忆库=(18022, 1536)
+2026-11-24 15:31:33 | INFO    | 测试集推理完成: 115 张 | 耗时=34.3s | 平均=297.9 ms/张（含读取与预处理）
+2026-11-24 15:31:38 | INFO    | 图像级 AUROC=0.9980 | 图像级 AP=0.9995
+2026-11-24 15:31:38 | INFO    | 像素级 AUROC=0.9870 | 像素级 AP=0.8864
+2026-11-24 15:31:38 | INFO    | AU-PRO=0.9410
+2026-11-24 15:31:38 | INFO    | 阈值=40.658225 -> 误报 FP=0 | 漏检 FN=2 | Precision=1.0000 | Recall=0.9785
+2026-11-24 15:31:59 | INFO    | 单张耗时: mean=340.4 ms | p99=398.3 ms | n=60 | 设备=CPU: 16 threads | 分辨率=256x256 | 含图片读取
+2026-11-24 15:32:00 | INFO    | 可视化已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\visualizations\comparison_grid.png
+2026-11-24 15:32:00 | INFO    | 指标已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\metrics.json 和 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\metrics.md
+2026-11-24 15:46:45 | INFO    | torch=2.14.1+cpu | cuda_available=False | cuda_version=None
+2026-11-24 15:46:45 | WARNING | 设备策略 auto -> 未检测到可用 CUDA，自动回退到 CPU（推理/建库会明显变慢）。
+2026-11-24 15:46:45 | INFO    | ==========================================================================
+2026-11-24 15:46:45 | INFO    | PatchCore 评估 | 类别=metal_nut | 设备=CPU: 16 threads | 输入尺寸=[256, 256]
+2026-11-24 15:46:45 | INFO    | ==========================================================================
+2026-11-24 15:46:45 | INFO    | 阈值来自验证集: 40.658225 | 策略=val_normal_robust | 验证集正常样本数=44 | 验证集误报率=0.0227
+2026-11-24 15:46:59 | INFO    | 模型已加载: 记忆库=(18022, 1536)
+2026-11-24 15:48:20 | INFO    | 测试集推理完成: 115 张 | 耗时=77.4s | 平均=673.4 ms/张（含读取与预处理）
+2026-11-24 15:48:30 | INFO    | 图像级 AUROC=0.9980 | 图像级 AP=0.9995
+2026-11-24 15:48:30 | INFO    | 像素级 AUROC=0.9870 | 像素级 AP=0.8864
+2026-11-24 15:48:30 | INFO    | AU-PRO=0.9410
+2026-11-24 15:48:30 | INFO    | 阈值=40.658225 -> 误报 FP=0 | 漏检 FN=2 | Precision=1.0000 | Recall=0.9785
+2026-11-24 15:49:14 | INFO    | 单张耗时: mean=732.2 ms | p99=896.7 ms | n=60 | 设备=CPU: 16 threads | 分辨率=256x256 | 含图片读取
+2026-11-24 15:49:18 | INFO    | 可视化已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\visualizations\comparison_grid.png
+2026-11-24 15:49:18 | INFO    | 指标已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\metrics.json 和 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\metal_nut\metrics.md

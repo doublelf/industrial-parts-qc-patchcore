@@ -1,0 +1,7 @@
+2026-11-24 15:58:56 | INFO    | OK   加载模型 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\model.pt
+2026-11-24 15:59:04 | INFO    | OK   ONNX 导出 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\export\weights\onnx\model.onnx
+2026-11-24 15:59:05 | INFO    | OK   ONNX Runtime 加载 input=input ['batch_size', 3, 256, 256] outputs=['pred_score', 'anomaly_map']
+2026-11-24 15:59:06 | INFO    | PyTorch 原始 PatchCore 参考分数: 30.332529
+2026-11-24 15:59:06 | INFO    |   resized_256_raw_[0,1] -> score=30.332449 (|diff|=0.000080), map_max_abs_diff=0.000110626220703125
+2026-11-24 15:59:06 | INFO    |   resized_256_imagenet_normalized -> score=226.085037 (|diff|=195.752508), map_max_abs_diff=199.261962890625
+2026-11-24 15:59:06 | INFO    | OK   数值验证 最大分数误差 8.01e-05

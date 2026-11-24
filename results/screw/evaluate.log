@@ -1,0 +1,45 @@
+2026-11-24 15:27:44 | INFO    | torch=2.14.1+cpu | cuda_available=False | cuda_version=None
+2026-11-24 15:27:44 | WARNING | 设备策略 auto -> 未检测到可用 CUDA，自动回退到 CPU（推理/建库会明显变慢）。
+2026-11-24 15:27:44 | INFO    | ==========================================================================
+2026-11-24 15:27:44 | INFO    | PatchCore 评估 | 类别=screw | 设备=CPU: 16 threads | 输入尺寸=[256, 256]
+2026-11-24 15:27:44 | INFO    | ==========================================================================
+2026-11-24 15:27:44 | INFO    | 阈值来自验证集: 41.472572 | 策略=val_normal_quantile | 验证集正常样本数=64 | 验证集误报率=0.0156
+2026-11-24 15:27:51 | INFO    | 模型已加载: 记忆库=(26214, 1536)
+2026-11-24 15:28:57 | INFO    | 测试集推理完成: 160 张 | 耗时=64.6s | 平均=403.8 ms/张（含读取与预处理）
+2026-11-24 15:29:06 | INFO    | 图像级 AUROC=0.9520 | 图像级 AP=0.9827
+2026-11-24 15:29:06 | INFO    | 像素级 AUROC=0.9895 | 像素级 AP=0.3369
+2026-11-24 15:29:06 | INFO    | AU-PRO=0.9411
+2026-11-24 15:29:06 | INFO    | 阈值=41.472572 -> 误报 FP=0 | 漏检 FN=97 | Precision=1.0000 | Recall=0.1849
+2026-11-24 15:29:30 | INFO    | 单张耗时: mean=414.2 ms | p99=520.6 ms | n=60 | 设备=CPU: 16 threads | 分辨率=256x256 | 含图片读取
+2026-11-24 15:29:34 | INFO    | 可视化已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\visualizations\comparison_grid.png
+2026-11-24 15:29:34 | INFO    | 指标已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\metrics.json 和 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\metrics.md
+2026-11-24 15:32:07 | INFO    | torch=2.14.1+cpu | cuda_available=False | cuda_version=None
+2026-11-24 15:32:07 | WARNING | 设备策略 auto -> 未检测到可用 CUDA，自动回退到 CPU（推理/建库会明显变慢）。
+2026-11-24 15:32:07 | INFO    | ==========================================================================
+2026-11-24 15:32:07 | INFO    | PatchCore 评估 | 类别=screw | 设备=CPU: 16 threads | 输入尺寸=[256, 256]
+2026-11-24 15:32:07 | INFO    | ==========================================================================
+2026-11-24 15:32:08 | INFO    | 阈值来自验证集: 34.155780 | 策略=val_normal_robust | 验证集正常样本数=64 | 验证集误报率=0.0312
+2026-11-24 15:32:22 | INFO    | 模型已加载: 记忆库=(26214, 1536)
+2026-11-24 15:34:35 | INFO    | 测试集推理完成: 160 张 | 耗时=128.6s | 平均=803.8 ms/张（含读取与预处理）
+2026-11-24 15:34:52 | INFO    | 图像级 AUROC=0.9520 | 图像级 AP=0.9827
+2026-11-24 15:34:52 | INFO    | 像素级 AUROC=0.9895 | 像素级 AP=0.3369
+2026-11-24 15:34:52 | INFO    | AU-PRO=0.9411
+2026-11-24 15:34:52 | INFO    | 阈值=34.155780 -> 误报 FP=4 | 漏检 FN=25 | Precision=0.9592 | Recall=0.7899
+2026-11-24 15:35:46 | INFO    | 单张耗时: mean=902.0 ms | p99=981.2 ms | n=60 | 设备=CPU: 16 threads | 分辨率=256x256 | 含图片读取
+2026-11-24 15:35:53 | INFO    | 可视化已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\visualizations\comparison_grid.png
+2026-11-24 15:35:53 | INFO    | 指标已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\metrics.json 和 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\metrics.md
+2026-11-24 15:49:28 | INFO    | torch=2.14.1+cpu | cuda_available=False | cuda_version=None
+2026-11-24 15:49:28 | WARNING | 设备策略 auto -> 未检测到可用 CUDA，自动回退到 CPU（推理/建库会明显变慢）。
+2026-11-24 15:49:28 | INFO    | ==========================================================================
+2026-11-24 15:49:28 | INFO    | PatchCore 评估 | 类别=screw | 设备=CPU: 16 threads | 输入尺寸=[256, 256]
+2026-11-24 15:49:28 | INFO    | ==========================================================================
+2026-11-24 15:49:29 | INFO    | 阈值来自验证集: 34.155780 | 策略=val_normal_robust | 验证集正常样本数=64 | 验证集误报率=0.0312
+2026-11-24 15:49:52 | INFO    | 模型已加载: 记忆库=(26214, 1536)
+2026-11-24 15:51:30 | INFO    | 测试集推理完成: 160 张 | 耗时=93.3s | 平均=583.1 ms/张（含读取与预处理）
+2026-11-24 15:51:46 | INFO    | 图像级 AUROC=0.9520 | 图像级 AP=0.9827
+2026-11-24 15:51:46 | INFO    | 像素级 AUROC=0.9895 | 像素级 AP=0.3369
+2026-11-24 15:51:46 | INFO    | AU-PRO=0.9411
+2026-11-24 15:51:46 | INFO    | 阈值=34.155780 -> 误报 FP=4 | 漏检 FN=25 | Precision=0.9592 | Recall=0.7899
+2026-11-24 15:52:40 | INFO    | 单张耗时: mean=899.4 ms | p99=999.8 ms | n=60 | 设备=CPU: 16 threads | 分辨率=256x256 | 含图片读取
+2026-11-24 15:52:46 | INFO    | 可视化已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\visualizations\comparison_grid.png
+2026-11-24 15:52:47 | INFO    | 指标已保存: D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\metrics.json 和 D:\Desktop\chat\opencode\project\industrial-parts-qc-patchcore\results\screw\metrics.md

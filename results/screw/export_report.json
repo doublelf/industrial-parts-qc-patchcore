@@ -1,0 +1,58 @@
+{
+  "category": "screw",
+  "status": "success",
+  "steps": [
+    {
+      "step": "加载模型",
+      "ok": true,
+      "detail": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\results\\screw\\model.pt"
+    },
+    {
+      "step": "ONNX 导出",
+      "ok": true,
+      "detail": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\results\\screw\\export\\weights\\onnx\\model.onnx"
+    },
+    {
+      "step": "ONNX Runtime 加载",
+      "ok": true,
+      "detail": "input=input ['batch_size', 3, 256, 256] outputs=['pred_score', 'anomaly_map']"
+    },
+    {
+      "step": "数值验证",
+      "ok": true,
+      "detail": "最大分数误差 8.01e-05"
+    }
+  ],
+  "onnx_path": "D:\\Desktop\\chat\\opencode\\project\\industrial-parts-qc-patchcore\\results\\screw\\export\\weights\\onnx\\model.onnx",
+  "onnx_external_data": true,
+  "onnx_size_mb": 248.67,
+  "onnx_check": {
+    "resized_256_raw_[0,1]": {
+      "score": 30.332448959350586,
+      "score_abs_diff": 8.0108642578125e-05,
+      "map_shape": [
+        256,
+        256
+      ],
+      "map_max_abs_diff": 0.000110626220703125
+    },
+    "resized_256_imagenet_normalized": {
+      "score": 226.0850372314453,
+      "score_abs_diff": 195.75250816345215,
+      "map_shape": [
+        256,
+        256
+      ],
+      "map_max_abs_diff": 199.261962890625
+    }
+  },
+  "pytorch_reference": {
+    "score": 30.332529067993164,
+    "map_shape": [
+      256,
+      256
+    ],
+    "score_space": "raw PatchCore distance (no post-processor)"
+  },
+  "verified_input_format": "resized_256_raw_[0,1]"
+}

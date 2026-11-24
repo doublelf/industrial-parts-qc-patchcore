@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Industrial Parts QC · Simulated Inspection Line</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%2338bdf8'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <!-- Top status bar -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>Parts Surface QC</span>
+      <span class="muted">PatchCore · Simulated Line</span>
+    </div>
+    <div class="status">
+      <span id="lineState" class="state paused">● Paused</span>
+      <label class="ctl">Category
+        <select id="category"></select>
+      </label>
+      <span class="metric">Threshold <b id="thresholdVal">--</b></span>
+      <span class="metric">Device <b id="deviceVal">--</b></span>
+      <span class="metric">Loaded <b id="modelMeta">--</b></span>
+    </div>
+  </header>
+
+  <!-- Control bar -->
+  <div class="toolbar">
+    <div class="tabs" role="tablist">
+      <button id="modeLine" class="tab active" role="tab">🏭 Line Sim</button>
+      <button id="modeCamera" class="tab" role="tab">📷 Camera</button>
+    </div>
+
+    <div class="transport">
+      <button id="btnStart" class="btn primary">▶ Start</button>
+      <button id="btnPause" class="btn" disabled>⏸ Pause</button>
+      <button id="btnStep" class="btn">⏭ Step</button>
+      <button id="btnShoot" class="btn hidden">📸 Capture &amp; Inspect</button>
+      <button id="btnReset" class="btn ghost">↺ Reset Stats</button>
+    </div>
+
+    <label class="slider">
+      <span>Takt</span>
+      <input id="interval" type="range" min="0.5" max="10" step="0.5" value="2" />
+      <b id="intervalLabel">2.0 s</b>
+    </label>
+
+    <label id="autoWrap" class="check hidden">
+      <input id="autoCapture" type="checkbox" />
+      Auto capture
+    </label>
+
+    <span id="loopBadge" class="badge hidden">Demo images looped</span>
+  </div>
+
+  <main>
+    <!-- Inspection stage -->
+    <section class="stage">
+      <figure class="panel imgpanel">
+        <div class="imgwrap">
+          <img id="origImg" class="hidden" alt="Original frame" />
+          <video id="video" autoplay playsinline muted hidden></video>
+          <div id="imgPlaceholder" class="placeholder">Waiting for part…</div>
+        </div>
+        <figcaption>Original image <span id="origMeta" class="muted"></span></figcaption>
+      </figure>
+
+      <figure class="panel imgpanel">
+        <div class="imgwrap">
+          <img id="overlayImg" class="hidden" alt="Anomaly heatmap overlay" />
+          <div id="overlayPlaceholder" class="placeholder">Heatmap will appear here</div>
+        </div>
+        <figcaption>PatchCore heatmap overlay</figcaption>
+      </figure>
+
+      <section class="panel verdict" id="verdict">
+        <div class="lamp" id="lamp"></div>
+        <div class="verdict-text" id="verdictText">Waiting</div>
+        <div class="score-line">
+          <span class="score" id="scoreBig">--</span>
+          <span class="score-unit">score</span>
+        </div>
+        <div class="scorebar">
+          <div class="fill" id="scoreFill"></div>
+          <div class="thr" id="thrLine"><i></i><em>Threshold</em></div>
+        </div>
+        <div class="rows">
+          <div><span>Inference time</span><b id="latencyVal">--</b></div>
+          <div><span>Source</span><b id="sourceVal">--</b></div>
+          <div><span>Demo position</span><b id="posVal">--</b></div>
+        </div>
+        <div class="hint" id="hint">Press "Start" to feed parts at takt time</div>
+      </section>
+    </section>
+
+    <!-- Statistics cards -->
+    <section class="stats">
+      <div class="card"><span>Inspected</span><b id="statTotal">0</b></div>
+      <div class="card ok"><span>Passed OK</span><b id="statOk">0</b></div>
+      <div class="card ng"><span>Failed NG</span><b id="statNg">0</b></div>
+      <div class="card"><span>Defect rate</span><b id="statRate">0.0%</b></div>
+      <div class="card"><span>Avg latency</span><b id="statLatency">--</b></div>
+    </section>
+
+    <!-- Trend + history -->
+    <section class="bottom">
+      <div class="panel trend">
+        <div class="panel-title">Anomaly score · last 50 parts <span id="trendMeta" class="muted"></span></div>
+        <canvas id="trendCanvas"></canvas>
+      </div>
+
+      <div class="panel history">
+        <div class="panel-title">Inspection history <span id="histMeta" class="muted"></span></div>
+        <div id="thumbs" class="thumbs"></div>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr><th>Time</th><th>Category</th><th>Source</th><th>Image</th><th class="num">Score</th><th>Result</th><th class="num">Latency</th></tr>
+            </thead>
+            <tbody id="histBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="disclaimer">
+    <b>Demo notice:</b> This page is a simulated inspection UI. Images come from the MVTec AD test set or the
+    <code>demo_images/</code> folder — it is not connected to a real production line. The model's memory bank was
+    built on MVTec AD, so real part distributions differ; the defect rate and accuracy shown here do not represent
+    real production performance. Camera footage is for demo purposes only.
+  </footer>
+
+  <div id="toast" class="toast hidden"></div>
+  <canvas id="captureCanvas" hidden></canvas>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
